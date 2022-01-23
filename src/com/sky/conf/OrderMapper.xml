@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sky.mapper.OrderMapper">
+    <resultMap id="allOrder" type="HashMap">
+        <id column="oid" property="oid"></id>
+        <result column="uname" property="uname"></result>
+        <result column="gname" property="gname"></result>
+        <result column="price" property="price"></result>
+        <result column="weight" property="weight"></result>
+        <result column="sname" property="sname"></result>
+        <result column="snames" property="snames"></result>
+        <result column="address" property="address"></result>
+        <result column="statename" property="statename"></result>
+        <result column="goodname" property="goodname"></result>
+    </resultMap>
+    <update id="checkOrder">
+        UPDATE `order` SET state=5 WHERE oid=#{oid} AND state=4
+    </update>
+    <select id="getOrder" resultMap="allOrder">
+        SELECT
+            o.oid,
+            u.uname,
+            g.gname,
+            o.price,
+            o.weight,
+            s.sname,
+            ss.sname snames,
+            o.address,
+            `state`.statename,
+            goodname
+        FROM
+            `order` o
+                JOIN `user` u ON o.uid = u.uid
+                JOIN `goods` g ON g.gid = o.gid
+                JOIN `site` s ON s.sid = o.sid
+                JOIN `site` ss ON o.retentionid = ss.sid
+                JOIN `state` ON o.state = `state`.stateid
+        <where>
+            <if test="state!=null">
+                o.state=#{state}
+            </if>
+        </where>
+
+    </select>
+</mapper>

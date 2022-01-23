@@ -1,0 +1,35 @@
+<!-- easyui  -->
+<script src="/ui/easyui/jquery.easyui.min.js"></script>
+
+<!-- jQuery 2.2.3 -->
+<script src="/ui/plugins/jQuery/jquery-2.2.3.min.js"></script>
+
+<!-- Bootstrap 3.3.6 -->
+<script src="/ui/bootstrap/js/bootstrap.min.js"></script>
+
+<script src="/ui/plugins/jqueryForm/jquery-form.js"></script>
+
+<!-- 表单验证 -->
+<script src="/ui/bootstrap/js/bootstrap3-validation.js"></script>
+
+<!-- 常用工具 -->
+<script type="text/javascript" src="/ui/common/js/ajax.js"></script>
+<script type="text/javascript" src="/ui/common/js/utils.js"></script>
+
+<!-- 复选框和单选框 -->
+<script type="text/javascript" src="/ui/plugins/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="/ui/plugins/select2/select2.full.min.js"></script>
+
+<script type="text/javascript" src="/ui/plugins/fastclick/fastclick.js"></script>
+
+<!-- 表格插件 -->
+<script src="/ui/bootstrap-table/src/bootstrap-table.js"></script>
+<script src="/ui/bootstrap-table/src/locale/bootstrap-table-zh-CN.js"></script>
+
+<!-- dialog -->
+<script src="/ui/bootstrap3-dialog/src/js/bootstrap-dialog.js"></script>
+<script src="/ui/bootstrap3-dialog/dialogUtils.js"></script>
+
+<script src="/ui/bootstrap/js/bootstrap-closable-tab.js"></script>
+
+
